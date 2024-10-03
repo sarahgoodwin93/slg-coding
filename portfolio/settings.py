@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     
     # Custom apps
     'projects',
+    'home',
+    'page1',
     
     # Allauth
     'allauth',
@@ -57,6 +59,12 @@ INSTALLED_APPS = [
 
     # Django Extensions
     'django_extensions',
+
+    # Crispy Forms
+    'crispy_forms',
+
+    # Debug Toolbar
+    'debug_toolbar',
 ]
 
 SITE_ID = 1
@@ -65,6 +73,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -78,8 +87,8 @@ ROOT_URLCONF = 'portfolio.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
+        'DIRS': [BASE_DIR / 'templates'],  # Directory for project-level templates
+        'APP_DIRS': True,  # Enable app directories for templates
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -154,8 +163,18 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'  # Directory where static files will be collected
+STATIC_URL = '/static/'  # URL path for serving static files in templates
+STATIC_ROOT = BASE_DIR / 'staticfiles'  # Directory for static files in production
+
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',  # Central static directory
+]
 
 # Enable WhiteNoise to serve static files
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+INTERNAL_IPS = [
+    '127.0.0.1',
+]
