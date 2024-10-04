@@ -21,6 +21,7 @@
     transition: transform 0.3s; /* Smooth hover effect */
     min-width: 100px; /* Minimum width for each card */
     display: inline-block; /* Display cards inline */
+    padding: 20px;
 }
 
 /* Card hover effect */
@@ -37,3 +38,99 @@
         transform: translateX(-100%); /* Move off-screen to the left */
     }
 }
+
+/* info cards */
+
+.info-card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allows cards to wrap to the next line if they don't fit */
+    padding: 20px;
+}
+
+.info-card {
+    background-color: #ffffff; /* Card background color */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px;
+    width: 250px; /* Set card width */
+    margin: 10px; /* Space between cards */
+    text-align: center; /* Center text */
+    transition: transform 0.2s; /* Smooth hover effect */
+}
+
+.info-card:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.info-card-icon {
+    font-size: 40px; /* Size of the icon */
+    margin-bottom: 10px; /* Space below the icon */
+    color: #007bff; /* Change to desired icon color */
+}
+
+.info-card-title {
+    font-size: 1.25rem; /* Title size */
+    font-weight: bold; /* Title weight */
+    margin: 10px 0; /* Space around title */
+}
+
+.info-card-description {
+    font-size: 0.9rem; /* Description size */
+    color: #666; /* Description color */
+    margin-bottom: 10px; /* Space below description */
+}
+
+.info-card-list {
+    list-style-type: none; /* Remove default list style */
+    padding: 0; /* Remove padding */
+}
+
+.info-card-list li {
+    font-size: 0.9rem; /* List item size */
+    margin: 5px 0; /* Space between list items */
+}
+
+/* Text on left, card on right */
+
+.custom-main-container {
+    display: flex; /* Use flexbox for side-by-side layout */
+    align-items: center; /* Center vertically */
+    padding: 20px; /* Add padding around the container */
+    background-color: #f7f8fa; /* Light background color */
+    border-radius: 15px; /* Rounded corners for the whole container */
+}
+
+.custom-text-container {
+    flex: 1; /* Take available space */
+    padding-right: 20px; /* Space between text and image */
+}
+
+.custom-main-title {
+    font-size: 2rem; /* Title font size */
+    margin-bottom: 15px; /* Space below title */
+    font-weight: bold; /* Title weight */
+}
+
+.custom-features-list {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+}
+
+.custom-features-list li {
+    font-size: 1rem; /* Font size for features */
+    margin-bottom: 10px; /* Space between features */
+}
+
+.custom-image-card {
+    width: 200px; /* Set a fixed width for the image card */
+    border-radius: 15px; /* Rounded corners for the image card */
+    overflow: hidden; /* Ensure image respects rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.custom-image {
+    width: 100%; /* Full width image */
+    height: auto; /* Maintain aspect ratio */
+}
+

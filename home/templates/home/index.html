@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
 Home
@@ -6,7 +7,7 @@ Home
 
 {% block content %}
 <div class="jumbotron text-center">
-    <h1>Welcome to the SLG Coding Template</h1>
+    <h1>Welcome to the SLG Coding Template.</h1>
     <p>Explore the standard templates and find out what we can offer</p>
 </div>
 
@@ -87,5 +88,72 @@ Home
         </div>
     </div>
 </div>
+
+<div class="info-card-container">
+    <div class="info-card">
+        <div class="info-card-icon">
+            <i class="fas fa-thumbs-up"></i> <!-- Use appropriate icon classes -->
+        </div>
+        <h5 class="info-card-title">Static Card Title</h5>
+        <p class="info-card-description">Example subtext</p>
+        <ul class="info-card-list">
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Consectetur adipiscing elit.</li>
+            <li>Sed do eiusmod tempor incididunt.</li>
+        </ul>
+    </div>
+    <div class="info-card">
+        <div class="info-card-icon">
+            <i class="fas fa-list-alt"></i>
+        </div>
+        <h5 class="info-card-title">Static Card Title</h5>
+        <p class="info-card-description">Example subtext</p>
+        <ul class="info-card-list">
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Consectetur adipiscing elit.</li>
+            <li>Sed do eiusmod tempor incididunt.</li>
+        </ul>
+    </div>
+    <div class="info-card">
+        <div class="info-card-icon">
+            <i class="fas fa-road"></i>
+        </div>
+        <h5 class="info-card-title">Static Card Title</h5>
+        <p class="info-card-description">Example subtext</p>
+        <ul class="info-card-list">
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Consectetur adipiscing elit.</li>
+            <li>Sed do eiusmod tempor incididunt.</li>
+        </ul>
+    </div>
+    <div class="info-card">
+        <div class="info-card-icon">
+            <i class="fas fa-chart-line"></i>
+        </div>
+        <h5 class="info-card-title">Static Card Title</h5>
+        <p class="info-card-description">Example subtext</p>
+        <ul class="info-card-list">
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Consectetur adipiscing elit.</li>
+            <li>Sed do eiusmod tempor incididunt.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="custom-main-container">
+    <h1 class="custom-main-title">The magic is making it yours</h1>
+    <ul class="custom-features-list">
+        <li>✔ Create a highly customized, hyper-specific app in minutes with Airtable Cobuilder</li>
+        <li>✔ Further customize the experience by dragging and dropping elements to make information more actionable</li>
+        <li>✔ Don't worry about design best practices, Airtable Cobuilder has you covered</li>
+    </ul>
+    <div class="custom-image-container">
+        <img src="{% static 'images/graph-image.png' %}" alt="Card Image 1" class="custom-image">
+    </div>
+</div>
+
+</div>
+
+
 
 {% endblock %}
