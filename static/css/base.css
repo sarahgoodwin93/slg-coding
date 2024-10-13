@@ -95,10 +95,17 @@
 
 .custom-main-container {
     display: flex; /* Use flexbox for side-by-side layout */
-    align-items: center; /* Center vertically */
+    align-items: flex-start; /* Align items to the top */
     padding: 20px; /* Add padding around the container */
     background-color: #f7f8fa; /* Light background color */
     border-radius: 15px; /* Rounded corners for the whole container */
+}
+
+.cusomt-main-text {
+    display: flex; /* Use flexbox for side-by-side layout */
+    align-items: flex-start; /* Align items to the top */
+    flex-direction: column;    
+    padding: 20px;
 }
 
 .custom-text-container {
@@ -134,3 +141,20 @@
     height: auto; /* Maintain aspect ratio */
 }
 
+/* Grow Image Section */
+
+.grow-image-section {
+    position: relative; /* Relative positioning for child elements */
+    overflow: hidden; /* Hide overflow for the image */
+    height: 400px; /* Set initial height for the section */
+    display: flex; /* Center the image */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-top: 40px; /* Space above the section */
+}
+
+.grow-image {
+    max-width: 100%; /* Keep image responsive */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.5s ease; /* Smooth transition for scaling */
+}
